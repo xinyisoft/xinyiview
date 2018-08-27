@@ -2,8 +2,8 @@
   "name": "iview",
   "version": "2.14.0",
   "title": "iView",
-  "description": "A high quality  UI components Library with Vue.js",
-  "homepage": "http://www.iviewui.com",
+  "description": "芯易科技内部开发VUE组件，本组建基于iview扩展",
+  "homepage": "http://www.xinyisoft.cn",
   "keywords": [
     "iview",
     "vue",
@@ -33,12 +33,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/iview/iview"
+    "url": "https://github.com/xinyisoft/xinyiview"
   },
   "author": "Aresn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iview/iview/issues"
+    "url": "https://github.com/xinyisoft/xinyiview/issues"
   },
   "dependencies": {
     "async-validator": "^1.8.2",
