@@ -52,15 +52,29 @@ import {Row, Col} from './components/grid';
 import {Select, Option, OptionGroup} from './components/select';
 import locale from './locale/index';
 /* 手机组件 */
-import ImCell from './components/im-cell';
-import ImCellGroup from './components/im-cell-group';
-import ImPanel from './components/im-panel';
-import ImCheckboxGroup from './components/im-checkbox-group';
-import ImCheckbox from './components/im-checkbox';
-import ImMessage from './components/mobile/message/index'
-
+import ImCell from './components/mobile/im-cell';
+import ImCellGroup from './components/mobile/im-cell-group';
+import ImPanel from './components/mobile/im-panel';
+import ImCheckbox from './components/mobile/im-checkbox';
+import ImRadio from './components/mobile/im-radio';
+import ImMessage from './components/mobile/message/index';
+import ImInput from './components/mobile/im-input';
+import ImInputNumber from './components/mobile/im-input-number';
+import ImTabBar from './components/mobile/im-tab-bar';
+import ImTabBarItem from './components/mobile/im-tab-bar-item';
+import ImTabs from './components/mobile/im-tabs';
+import ImTab from './components/mobile/im-tab';
+import {ImGrid,ImGridItem} from './components/mobile/im-grid';
 const components = {
-    ImCheckboxGroup,
+    ImGrid,
+    ImGridItem,
+    ImTabs,
+    ImTab,
+    ImTabBar,
+    ImTabBarItem,
+    ImInput,
+    ImInputNumber,
+    ImRadio,
     ImCheckbox,
     ImPanel,
     ImCell,

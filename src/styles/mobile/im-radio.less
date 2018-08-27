@@ -1,20 +1,20 @@
-.i-checkbox {
+.i-radio {
     &-cell {
         &::after {
             display: block;
         }
     }
-    &-checkbox-left {
+    &-radio-left {
         float: left;
     }
-    &-checkbox-right {
+    &-radio-right {
         float: right;
     }
     &-input{
         vertical-align: middle;
         display: none;
         &:checked {
-            + .i-checkbox-core {
+            + .i-radio-core {
                 background-color:@info-color;
                 border-color: @info-color;
 
@@ -25,7 +25,7 @@
             }
         }
 
-        &[disabled] + .i-checkbox-core {
+        &[disabled] + .i-radio-core {
             background-color:@border-color-base;
             border-color: #ccc;
         }

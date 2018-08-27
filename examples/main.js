@@ -20,14 +20,6 @@ const router = new VueRouter({
     esModule: false,
     routes: [
         {
-            path: '/im-checkbox',
-            component: (resolve) => require(['./routers/im-checkbox.vue'], resolve)
-        },
-        {
-            path: '/im-list',
-            component: (resolve) => require(['./routers/im-list.vue'], resolve)
-        },
-        {
             path: '/layout',
             component: (resolve) => require(['./routers/layout.vue'], resolve)
         },
@@ -214,7 +206,39 @@ const router = new VueRouter({
         {
             path: '/Mobile/message',
             component: (resolve) => require(['./routers/Mobile/message.vue'], resolve)
-        }
+        },
+        {
+            path: '/im-radio',
+            component: (resolve) => require(['./routers/Mobile/im-radio.vue'], resolve)
+        },
+        {
+            path: '/im-checkbox',
+            component: (resolve) => require(['./routers/Mobile/im-checkbox.vue'], resolve)
+        },
+        {
+            path: '/im-list',
+            component: (resolve) => require(['./routers/Mobile/im-list.vue'], resolve)
+        },
+        {
+            path: '/im-input',
+            component: (resolve) => require(['./routers/Mobile/im-input.vue'], resolve)
+        },
+        {
+            path: '/im-input-number',
+            component: (resolve) => require(['./routers/Mobile/im-input-number.vue'], resolve)
+        },
+        {
+            path: '/im-tab-bar',
+            component: (resolve) => require(['./routers/Mobile/im-tab-bar.vue'], resolve)
+        },
+        {
+            path: '/im-tabs',
+            component: (resolve) => require(['./routers/Mobile/im-tabs.vue'], resolve)
+        },
+        {
+            path: '/im-grid',
+            component: (resolve) => require(['./routers/Mobile/im-grid.vue'], resolve)
+        },
     ]
 });
 

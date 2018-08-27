@@ -73,6 +73,12 @@ nav {
                 <li><router-link to="/Mobile/message">Mobile message</router-link></li>
                 <li><router-link to="/im-list">im-list列表</router-link></li>
                 <li><router-link to="/im-checkbox">im-checkbox复选</router-link></li>
+                <li><router-link to="/im-radio">im-radio单选</router-link></li>
+                <li><router-link to="/im-input">im-input输入框</router-link></li>
+                <li><router-link to="/im-input-number">im-input-number数字输入框</router-link></li>
+                <li><router-link to="/im-tab-bar">im-tab-bar标签栏</router-link></li>
+                <li><router-link to="/im-tabs">im-tabs标签页</router-link></li>
+                <li><router-link to="/im-grid">im-grid 宫格</router-link></li>
             </ul>
         </nav>
         <router-view></router-view>

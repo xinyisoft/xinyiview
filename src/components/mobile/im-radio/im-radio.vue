@@ -1,17 +1,17 @@
 <template>
-    <div class="i-class i-checkbox">
-        <im-cell i-class="i-checkbox-cell">
-            <label class="i-checkbox-label">
+    <div class="i-class i-radio">
+        <im-cell i-class="i-radio-cell">
+            <label class="i-radio-label">
                 <span :class="[alignCls]">
                   <input
                       v-model="currentValue"
-                      :class="['i-checkbox-input']"
-                      type="checkbox"
+                      :class="['i-radio-input']"
+                      type="radio"
                       :disabled="disabled"
                       :value="options">
-                  <span class="i-checkbox-core"></span>
+                  <span class="i-radio-core"></span>
                 </span>
-                <div class="i-checkbox-title">{{options}}</div>
+                <div class="i-radio-title">{{options}}</div>
             </label>
         </im-cell>
     </div>
@@ -19,13 +19,13 @@
 
 
 <script>
-    const prefixCls = 'i-checkbox';
+    const prefixCls = 'i-radio';
     export default {
-        name: 'ImCheckbox',
+        name: 'ImRadio',
         data () {
             return {
                 currentValue: this.value,
-                alignCls: `${prefixCls}-checkbox-${this.align}`,
+                alignCls: `${prefixCls}-radio-${this.align}`,
             };
         },
         watch: {
@@ -33,16 +33,17 @@
                 this.currentValue = val;
             },
             currentValue(val) {
-                if ( val.length > this.limit) val.pop();
                 this.$emit('input', val);
             }
         },
         props: {
-            options: {
+            value: {
                 type: String,
-                value:'',
             },
-            value: Array,
+            options:{
+                type: String,
+                value: ''
+            },
             disabled: {
                 type: Boolean,
                 value: false
@@ -51,10 +52,6 @@
                 type: String,
                 value: '#2d8cf0'
             },
-            limit: {
-                type: Number,
-                value: 0
-            },
             align: {
                 type: String,
                 value: 'left', //left right
@@ -62,5 +59,3 @@
         },
     }
 </script>
-
-
