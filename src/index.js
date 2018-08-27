@@ -64,8 +64,24 @@ import ImTabBar from './components/mobile/im-tab-bar';
 import ImTabBarItem from './components/mobile/im-tab-bar-item';
 import ImTabs from './components/mobile/im-tabs';
 import ImTab from './components/mobile/im-tab';
+import ImSearch from './components/mobile/im-search';
+import ImScrollView from './components/mobile/im-scroll-view';
+import ImSwipeout from './components/mobile/im-swipeout';
+import ImPicker from './components/mobile/im-picker';
+import ImLoadMore from './components/mobile/im-load-more';
+import ImDrawer from './components/mobile/im-drawer';
+import ImActionSheet from './components/mobile/im-action-sheet';
 import {ImGrid,ImGridItem} from './components/mobile/im-grid';
+// import ImPicker from 'vue-awesome-picker';
+// import AwesomePicker from 'vue-awesome-picker';
 const components = {
+    ImDrawer,
+    ImLoadMore,
+    ImActionSheet,
+    ImPicker,
+    ImSwipeout,
+    ImSearch,
+    ImScrollView,
     ImGrid,
     ImGridItem,
     ImTabs,

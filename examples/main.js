@@ -228,6 +228,10 @@ const router = new VueRouter({
             component: (resolve) => require(['./routers/Mobile/im-input-number.vue'], resolve)
         },
         {
+            path: '/im-search',
+            component: (resolve) => require(['./routers/Mobile/im-search.vue'], resolve)
+        },
+        {
             path: '/im-tab-bar',
             component: (resolve) => require(['./routers/Mobile/im-tab-bar.vue'], resolve)
         },
@@ -238,6 +242,30 @@ const router = new VueRouter({
         {
             path: '/im-grid',
             component: (resolve) => require(['./routers/Mobile/im-grid.vue'], resolve)
+        },
+        {
+            path: '/im-scroll-view',
+            component: (resolve) => require(['./routers/Mobile/im-scroll-view.vue'], resolve)
+        },
+        {
+            path: '/im-picker',
+            component: (resolve) => require(['./routers/Mobile/im-picker.vue'], resolve)
+        },
+        {
+            path: '/im-swipeout',
+            component: (resolve) => require(['./routers/Mobile/im-swipeout.vue'], resolve)
+        },
+        {
+            path: '/im-action-sheet',
+            component: (resolve) => require(['./routers/Mobile/im-action-sheet.vue'], resolve)
+        },
+        {
+            path: '/im-load-more',
+            component: (resolve) => require(['./routers/Mobile/im-load-more'], resolve)
+        },
+        {
+            path: '/im-drawer',
+            component: (resolve) => require(['./routers/Mobile/im-drawer'], resolve)
         },
     ]
 });

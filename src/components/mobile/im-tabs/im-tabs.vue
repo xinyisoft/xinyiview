@@ -40,10 +40,10 @@
                 type: String,
                 value:'',
             },
-            scrollThreshold:{
-                type: Number,
-                value: 4,
-            },
+            // scrollThreshold:{
+            //     type: Number,
+            //     value: 4,
+            // },
             current: {
                 type: String,
                 value: '#2d8cf0',

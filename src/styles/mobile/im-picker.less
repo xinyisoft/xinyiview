@@ -1,0 +1,49 @@
+.im-picker{
+    height: 300px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    background: #ffffff;
+    &-head{
+        line-height: 30px;
+        overflow: hidden;
+        border-bottom: 1px solid #ededed;
+
+        font-size: 16px;
+        &>*{
+            float:left;
+            padding: 6px 15px;
+        }
+        &-cancel{
+            width: 20%;
+        }
+        &-confirm{
+            width: 20%;
+            text-align: right;
+        }
+        &-title{
+            text-align:center;
+            width: 60%;
+        }
+
+    }
+
+    &-body{
+        height: 80%;
+        background: red;
+        text-align: center;
+        ul,li{
+            font-size: 14px;
+            list-style: none;
+            padding: 6px;
+        }
+
+        ul{
+            display: inline-block;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y:scroll;
+        }
+    }
+}

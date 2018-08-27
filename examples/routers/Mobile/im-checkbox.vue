@@ -40,6 +40,9 @@
                 disabled: true,
             }
         },
+        created:{
+
+        },
         methods: {
 
         }

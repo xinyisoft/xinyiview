@@ -6,7 +6,7 @@
                 <div v-else :class="['i-tabs-tab-title' ]">{{ title }}</div>
             </div>
         </Badge>
-        <div class="i-tabs-tab-bar" v-if=" current "  :style="barStyle"></div>
+        <div class="i-tabs-tab-bar"   :style="barStyle"></div>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 {
   "name": "xinyiview",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "XinyiView",
   "description": "芯易科技内部开发VUE组件，本组建基于iview扩展",
   "homepage": "http://www.xinyisoft.cn",
@@ -48,7 +48,8 @@
     "lodash.throttle": "^4.1.1",
     "popper.js": "^1.14.1",
     "tinycolor2": "^1.4.1",
-    "v-click-outside-x": "^2.4.0"
+    "v-click-outside-x": "^2.4.0",
+    "vue-awesome-picker": "^1.1.0"
   },
   "peerDependencies": {
     "vue": "^2.5.2"
@@ -107,7 +108,6 @@
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^14.2.1",
     "vue-router": "^3.0.1",
-    "vue-style-loader": "^4.0.2",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1",

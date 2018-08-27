@@ -1,6 +1,5 @@
 <style lang="less">
     @import "../src/styles/index.less";
-    @import "../src/styles/mobile.less";
 </style>
 <style lang="less" scoped>
 nav {
@@ -76,9 +75,16 @@ nav {
                 <li><router-link to="/im-radio">im-radio单选</router-link></li>
                 <li><router-link to="/im-input">im-input输入框</router-link></li>
                 <li><router-link to="/im-input-number">im-input-number数字输入框</router-link></li>
+                <li><router-link to="/im-search">im-search 搜索输入框</router-link></li>
                 <li><router-link to="/im-tab-bar">im-tab-bar标签栏</router-link></li>
                 <li><router-link to="/im-tabs">im-tabs标签页</router-link></li>
                 <li><router-link to="/im-grid">im-grid 宫格</router-link></li>
+                <li><router-link to="/im-scroll-view">im-scroll-view 滚动视图</router-link></li>
+                <li><router-link to="/im-picker">im-picker 选择器</router-link></li>
+                <li><router-link to="/im-swipeout">im-swipeout 选择器</router-link></li>
+                <li><router-link to="/im-action-sheet">im-action-sheet 动作面板</router-link></li>
+                <li><router-link to="/im-load-more">im-load-more 动作面板</router-link></li>
+                <li><router-link to="/im-drawer">im-drawer 侧滑插件</router-link></li>
             </ul>
         </nav>
         <router-view></router-view>

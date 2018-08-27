@@ -13,14 +13,19 @@
     text-align: center;
     position: relative;
     height: 100%;
+
+    &-current{
+        .i-tabs-tab-bar{
+            visibility: visible;
+        }
+    }
+
     &-bar{
-        display: block;
+        visibility:hidden;
         width: 100%;
         height: 2px;
-        background: transparent;
         position: absolute;
         bottom: 0;
-        //left: 0;
         background: @primary-color;
     }
 
