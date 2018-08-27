@@ -3,6 +3,7 @@
         <im-load-more />
         <im-load-more tip="暂无数据" :loading=" false" />
         <im-load-more :loading="false" />
+        <Icon type="ios-checkmark" />
     </div>
 
 </template>

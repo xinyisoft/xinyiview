@@ -70,11 +70,13 @@ import ImSwipeout from './components/mobile/im-swipeout';
 import ImPicker from './components/mobile/im-picker';
 import ImLoadMore from './components/mobile/im-load-more';
 import ImDrawer from './components/mobile/im-drawer';
+import ImIcon from './components/mobile/im-icon';
 import ImActionSheet from './components/mobile/im-action-sheet';
 import {ImGrid,ImGridItem} from './components/mobile/im-grid';
 // import ImPicker from 'vue-awesome-picker';
 // import AwesomePicker from 'vue-awesome-picker';
 const components = {
+    ImIcon,
     ImDrawer,
     ImLoadMore,
     ImActionSheet,

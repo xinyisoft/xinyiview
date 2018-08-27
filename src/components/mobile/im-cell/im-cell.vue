@@ -1,22 +1,25 @@
 <template>
-    <a :href="url"  :class="['i-class i-cell',isLastCell ? 'i-cell-last' : '' ,  url ? 'i-cell-access' : '',IClass]">
+    <div @click="handleClick" >
 
+
+    <router-link  :to="url"  :class="['i-class i-cell',isLastCell ? 'i-cell-last' : '' ,  url ? 'i-cell-access' : '',IClass]" >
         <div class="i-cell-icon">
             <slot name="icon"></slot>
         </div>
         <div class="i-cell-bd">
-            <div wx:if="title" class="i-cell-text">{{ title }}</div>
-            <div wx:if="label" class="i-cell-desc">{{ label }}</div>
+            <div v-if="title" class="i-cell-text">{{ title }}</div>
+            <div v-if="label" class="i-cell-desc">{{ label }}</div>
             <slot></slot>
         </div>
         <div  class="i-cell-ft">
-            <div wx:if="value">{{ value }}</div>
-            <div wx:else>
+            <div v-if="value">{{ value }}</div>
+            <div v-else>
                 <slot name="footer"></slot>
             </div>
         </div>
 
-    </a>
+    </router-link>
+    </div>
 </template>
 
 <script>
@@ -38,7 +41,8 @@
             },
             url: {
                 type: String,
-                value: ''
+                value: '',
+                default:'',
             },
             IClass:{
                 type: String,
@@ -51,7 +55,9 @@
             };
         },
         methods: {
-
+            handleClick(e){
+                this.$emit('on-click',e);
+            }
 
         }
 

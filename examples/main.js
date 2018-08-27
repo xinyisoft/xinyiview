@@ -267,6 +267,10 @@ const router = new VueRouter({
             path: '/im-drawer',
             component: (resolve) => require(['./routers/Mobile/im-drawer'], resolve)
         },
+        {
+            path: '/im-icon',
+            component: (resolve) => require(['./routers/Mobile/im-icon'], resolve)
+        },
     ]
 });
 

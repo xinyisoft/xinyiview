@@ -2,19 +2,6 @@
     <div class="i-swipeout-wrap i-class"
          @touchstart="handlerTouchstart"
          @touchmove="handlerTouchmove">
-        <!--@touchstart="start"-->
-        <!--@mousedown="start"-->
-        <!--@touchmove="move"-->
-        <!--@mousemove="move"-->
-        <!--@touchend="end"-->
-        <!--@mouseup="end"-->
-        <!--@touchcancel="end">-->
-        <!--@mousedown="start"-->
-         <!--&lt;!&ndash;@mousemove="move"&ndash;&gt;-->
-         <!--&lt;!&ndash;@touchend="end"&ndash;&gt;-->
-         <!--&lt;!&ndash;@mouseup="end"&ndash;&gt;-->
-         <!--@touchcancel="end">-->
-
         <div class="i-swipeout-item">
             <div class="i-swipeout-content">
                 <slot name="content"></slot>
