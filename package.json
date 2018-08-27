@@ -1,5 +1,5 @@
 {
-  "name": "Xinyiview",
+  "name": "xinyiview",
   "version": "1.0.0",
   "title": "XinyiView",
   "description": "芯易科技内部开发VUE组件，本组建基于iview扩展",
@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xinyisoft/xinyiview"
+    "url": "git+https://github.com/xinyisoft/xinyiview.git"
   },
   "author": "Aresn",
   "license": "MIT",
@@ -125,5 +125,9 @@
     "Edge >= 12",
     "iOS >= 10",
     "Android >= 6"
-  ]
+  ],
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  }
 }
