@@ -15,8 +15,8 @@ module.exports = merge(webpackBaseConfig, {
     output: {
         path: path.resolve(__dirname, '../dist'),
         publicPath: '/dist/',
-        filename: 'iview.min.js',
-        library: 'iview',
+        filename: 'xinyiview.min.js',
+        library: 'xinyiview',
         libraryTarget: 'umd',
         umdNamedDefine: true
     },
