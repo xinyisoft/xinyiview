@@ -19,9 +19,10 @@
 >
 > 基于 iview3.x
 
-## Docs
+## 相关引入的扩展Docs
 
 ### [iview中文文档 (3.x)](https://www.iviewui.com)
+### [iView-Doc](https://github.com/iview/iview-doc)
 
 ## Install
 
@@ -51,7 +52,6 @@ npm install xinyiview --save
 Using css via `import`:
 
 ```js
-import 'iview/dist/styles/iview.css';
+import 'xinyiview/dist/styles/xinyiview.css';
 ```
 
-- [iView-Doc](https://github.com/iview/iview-doc)
