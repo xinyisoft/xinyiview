@@ -1,5 +1,7 @@
 <template>
-    <li :class="classes" @click.stop="handleClick" :style="itemStyle"><slot></slot></li>
+    <li :class="classes" @click.stop="handleClick" :style="itemStyle">
+        <slot></slot>
+    </li>
 </template>
 <script>
     import Emitter from '../../mixins/emitter';

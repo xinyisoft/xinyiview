@@ -85,7 +85,7 @@ nav {
                 <li><router-link to="/im-action-sheet">im-action-sheet 动作面板</router-link></li>
                 <li><router-link to="/im-load-more">im-load-more 动作面板</router-link></li>
                 <li><router-link to="/im-drawer">im-drawer 侧滑插件</router-link></li>
-                <li><router-link to="/im-icon">im-drawer 图标</router-link></li>
+                <li><router-link to="/im-icon">im-icon 图标</router-link></li>
             </ul>
         </nav>
         <router-view></router-view>

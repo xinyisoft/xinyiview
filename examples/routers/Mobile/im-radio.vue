@@ -2,20 +2,17 @@
     <div>
 
         <im-panel title="right对齐">
-            <im-cell-group>
-                <im-radio v-model="radioItem" v-for="item in fruit" :key="item.id" align="right"  :options="item.name"></im-radio>
-            </im-cell-group>
+                <im-radio v-model="radioItem"  align="right"  @on-change="handleChange" :options="fruit"></im-radio>
+
         </im-panel>
         radio: {{radioItem}}
-        <!--<im-panel title="left对齐">-->
-            <!--<im-radio-group :current="current">-->
-                <!--<im-radio   v-for="item in fruit" :key="item.id"  align="left"  :value="item.name"></im-radio>-->
-            <!--</im-radio-group>-->
-        <!--</im-panel>-->
+        <im-panel title="left对齐">
+            <im-radio   align="left" :options="fruit" ></im-radio>
+        </im-panel>
 
-        <!--<im-panel title="checkbox-动物">-->
-            <!--<im-radio value="animal" :disabled="disabled"></im-radio>-->
-        <!--</im-panel>-->
+        <im-panel title="禁用">
+            <im-radio :options="fruit" :disabled="disabled"></im-radio>
+        </im-panel>
     </div>
 
 </template>
@@ -23,18 +20,18 @@
     export default {
         data () {
             return {
-                radioItem:'苹果',
+                radioItem:'1',
                 fruit: [{
-                    id: 1,
+                    key: 1,
                     name: '香蕉',
                 }, {
-                    id: 2,
+                    key: 2,
                     name: '苹果'
                 }, {
-                    id: 3,
+                    key: 3,
                     name: '西瓜'
                 }, {
-                    id: 4,
+                    key: 4,
                     name: '葡萄',
                 }],
                 current: '苹果',
@@ -45,8 +42,8 @@
             }
         },
         methods: {
-            headlRadio(){
-                console.log();
+            handleChange(e){
+                console.log(e);
             }
         }
     }

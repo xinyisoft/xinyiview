@@ -1,12 +1,8 @@
+
 .i-cell {
     text-decoration: none;
     color:inherit;
     cursor:default;
-    &:hover{
-        text-decoration: none;
-        color:inherit;
-    }
-
     position: relative;
     padding: 12px 15px;
     display: flex;
@@ -15,6 +11,27 @@
     line-height: 1.4;
     font-size: @size-font-base;
     overflow: hidden;
+
+
+
+    &-group-hover{
+        .i-cell:hover{
+            background: #f8f8f9;
+            //color:#ffffff;
+            //.i-cell-text{
+            //    color:#ffffff;
+            //}
+        }
+    }
+    &-group-active{
+        .i-cell-active{
+            background: #e9eaec;
+            //color:#ffffff;
+            //.i-cell-text{
+            //    color:#ffffff;
+            //}
+        }
+    }
 
     &::after{
         .hairline();
@@ -40,6 +57,7 @@
     &-text{
         line-height: 24px;
         font-size: @size-font-base;
+        color:#17233d;
     }
 
     &-desc{

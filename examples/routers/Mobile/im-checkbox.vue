@@ -1,16 +1,12 @@
 <template>
     <div>
         <im-panel title="right对齐，只能选择2个">
-            <im-cell-group>
-                <im-checkbox :limit="2"  v-model="checkedValue"  v-for="item in fruit" :key="item.id" align="right"  :options="item.name"></im-checkbox>
-            </im-cell-group>
+            <im-checkbox :limit="2"  v-model="checkedValue" @on-change="headlchange"  align="right"  :options="fruit"></im-checkbox>
         </im-panel>
         checkedValue:{{checkedValue}}
 
-
-
         <im-panel title="禁用">
-            <im-checkbox options="animal" :disabled="disabled"></im-checkbox>
+            <im-checkbox :options="[{key:'animal',name:'animal'}]" :disabled="disabled"></im-checkbox>
         </im-panel>
     </div>
 
@@ -19,18 +15,18 @@
     export default {
         data () {
             return {
-                checkedValue:['香蕉','苹果'],
+                checkedValue:['1','2','4'],
                 fruit: [{
-                    id: 1,
+                    key: 1,
                     name: '香蕉',
                 }, {
-                    id: 2,
+                    key: 2,
                     name: '苹果'
                 }, {
-                    id: 3,
+                    key: 3,
                     name: '西瓜'
                 }, {
-                    id: 4,
+                    key: 4,
                     name: '葡萄',
                 }],
                 current: ['苹果', '葡萄'],
@@ -40,11 +36,11 @@
                 disabled: true,
             }
         },
-        created:{
 
-        },
         methods: {
-
+            headlchange(e){
+                console.log(e);
+            }
         }
     }
 </script>

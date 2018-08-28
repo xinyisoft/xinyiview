@@ -5,10 +5,10 @@
             <i-button type="ghost" @click="handleOpen2">带有提示、异步</i-button>
         </div>
         <im-action-sheet :visible=" visible1 " :actions=" actions1 " cancelText="取消" show-cancel @on-cancel="handleCancel1" @on-click="handleClickItem1" />
-        <im-action-sheet :visible=" visible2 " :actions=" actions2 " show-cancel @on-cancel="handleCancel2" @on-click="handleClickItem2" :mask-closable=" false ">
+        <im-action-sheet :visible=" visible2 " :actions=" actions2 " show-cancel @on-cancel="handleCancel2" @on-click="handleClickItem2"  :mask-closable=" false ">
             <div slot="header" style="padding: 16px">
                 <div style="color: #444;font-size: 16px">确定吗？</div>
-                <text>删除后无法恢复哦</text>
+                <span>删除后无法恢复哦</span>
             </div>
         </im-action-sheet>
     </div>
@@ -70,29 +70,21 @@
             handleClickItem1 (index) {
                 console.log(index);
                 // const index = detail.index + 1;
-
-                // $Message({
-                //     content: '点击了选项' + index
-                // });
             },
 
             handleClickItem2 () {
-                const action = [...this.data.actions2];
+                const action = [...this.actions2];
                 action[0].loading = true;
 
                 this.actions2= action
 
-                // setTimeout(() => {
-                //     action[0].loading = false;
-                //     this.setData({
-                //         visible2: false,
-                //         actions2: action
-                //     });
-                //     $Message({
-                //         content: '删除成功！',
-                //         type: 'success'
-                //     });
-                // }, 2000);
+                setTimeout(() => {
+                    action[0].loading = false;
+                    this.visible2 = false;
+                    this.actions2 = action;
+
+                    alert('成功');
+                }, 2000);
             }
         }
     }

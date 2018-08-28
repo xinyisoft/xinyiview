@@ -1,11 +1,11 @@
-.i-as{
+.im-mask{
     position: fixed;
     width: 100%;
     box-sizing: border-box;
     left: 0;
     right: 0;
     bottom: 0;
-    background: @background-color-base;
+    background: #ffffff;
     transform: translate3d(0, 100%, 0);
     transform-origin: center;
     transition: all @transition-time ease-in-out;
@@ -23,7 +23,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.7);
+        background: #ffffff;
         z-index: @zindex-select;
         transition: all @transition-time ease-in-out;
         opacity: 0;
@@ -39,7 +39,7 @@
         position: relative;
         &::after{
             .hairline();
-            border-bottom-width: 1px;
+            border-bottom-width: 2px;
         }
     }
 
@@ -52,12 +52,12 @@
         color: @subsidiary-color;
         &::after{
             .hairline();
-            border-bottom-width: 1px;
+            border-bottom-width: 2px;
         }
     }
 
     &-cancel{
-        margin-top: 6px;
+        border-top:2px solid #e5e5e5;
     }
 
     &-btn{
@@ -85,6 +85,9 @@
             margin-right: 4px;
         }
     }
+}
+.im-mask-btn{
+    border: 0;
 }
 
 @keyframes btn-spin {

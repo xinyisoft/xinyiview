@@ -3,8 +3,9 @@
         <Card :bordered="false">
             <p slot="title">No border title</p>
             <p>
-                <im-cell-group>
+                <im-cell-group value="ks" :hover="true" :active="true" @on-click="headClick2">
                     <im-cell title="跳转到首页"  @on-click="headClick"  value="详细信息"></im-cell>
+                    <im-cell title="跳转到首页" name="ks"  @on-click="headClick"  value="详细信息"></im-cell>
                     <im-cell label="附加描述" title="跳转到首页"  url="/pages/dashboard/index" value="详细信息"></im-cell>
                     <im-cell  title="跳转到首页" value="详细信息">
                         <icon type="ios-filing"  slot="icon" />
@@ -15,7 +16,6 @@
         <im-panel title="单行">
             <im-cell  title="单行列" ></im-cell>
         </im-panel>
-
         <im-panel title="跳转">
             <im-cell-group>
                 <im-cell title="跳转到首页"  url="/pages/dashboard/index" value="详细信息"></im-cell>
@@ -47,6 +47,9 @@
         methods: {
             headClick(e){
                 console.log(e);
+            },
+            headClick2(e){
+                console.log(2,e);
             }
         }
     }

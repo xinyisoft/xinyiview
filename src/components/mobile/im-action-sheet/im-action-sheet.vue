@@ -1,27 +1,25 @@
 <template>
-    <div>
-    <div :class="['i-as-mask i-class-mask' , visible ? 'i-as-mask-show' : '' ]"  @click="handleClickMask"></div>
-    <div :class="['i-class i-as' , visible ? 'i-as-show' : '' ]">
-        <div class="i-as-header i-class-header"><slot name="header"></slot></div>
-        <div class="i-as-actions">
-            <div class="i-as-action-item" v-for="(item, index) in actions"  :key="item.name">
+    <div :class="['i-class im-mask' , visible ? 'im-mask-show' : '' ]"  @click="handleClickMask">
+        <div class="im-mask-header"><slot name="header"></slot></div>
+        <div class="im-mask-actions">
+            <div class="im-mask-action-item" v-for="(item, index) in actions"  :key="item.name">
                 <i-button
+                    class="im-mask-btn"
                     @click="handleClickItem"
                     :data-index=" index "
                     :open-type=" item.openType"
                     type="ghost"
                     size="large"
                     long>
-                    <div class="i-as-btn-loading" v-if=" item.loading "></div>
-                    <Icon  v-if=" item.icon " :type=" item.icon " i-class="i-as-btn-icon"></Icon>
-                    <div class="i-as-btn-text" :style=" item.color ? 'color: ' + item.color : '' ">{{ item.name }}</div>
+                    <div class="im-mask-btn-loading" v-if=" item.loading "></div>
+                    <im-icon  v-if=" item.icon " :type=" item.icon " i-class="i-mask-btn-icon"></im-icon>
+                    <div class="im-mask-btn-text" :style=" item.color ? 'color: ' + item.color : '' ">{{ item.name }}</div>
                 </i-button>
             </div>
         </div>
-        <div class="i-as-cancel" v-if="showCancel">
-            <i-button i-class="i-as-cancel-btn" type="ghost" size="large" long  @click="handleClickCancel">{{ cancelText }}</i-button>
+        <div class="im-mask-cancel" v-if="showCancel">
+            <i-button class="im-mask-cancel-btn" type="ghost" size="large" long  @click="handleClickCancel">{{ cancelText }}</i-button>
         </div>
-    </div>
     </div>
 
 </template>
@@ -65,9 +63,10 @@
             },
 
             handleClickItem ({currentTarget}) {
+
                 const dataset = currentTarget.dataset || {};
                 const { index } = dataset;
-                this.$emit('on-click',index)
+                this.$emit('on-click',{value:index})
             },
 
             handleClickCancel () {

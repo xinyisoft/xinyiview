@@ -1,20 +1,22 @@
 <template>
-    <div class="i-class i-radio">
-        <im-cell i-class="i-radio-cell">
+    <im-cell-group>
+        <div class="i-class i-radio" v-for="item in options" :key="item.key" @change="handleChange">
             <label class="i-radio-label">
-                <span :class="[alignCls]">
-                  <input
-                      v-model="currentValue"
-                      :class="['i-radio-input']"
-                      type="radio"
-                      :disabled="disabled"
-                      :value="options">
-                  <span class="i-radio-core"></span>
-                </span>
-                <div class="i-radio-title">{{options}}</div>
+                <im-cell i-class="i-radio-cell">
+                    <span :class="[alignCls]">
+                      <input
+                          v-model="currentValue"
+                          :class="['i-radio-input']"
+                          type="radio"
+                          :disabled="disabled"
+                          :value="item.key">
+                      <span class="i-radio-core"></span>
+                    </span>
+                    <div class="i-radio-title">{{item.name}}</div>
+                </im-cell>
             </label>
-        </im-cell>
-    </div>
+        </div>
+    </im-cell-group>
 </template>
 
 
@@ -41,7 +43,7 @@
                 type: String,
             },
             options:{
-                type: String,
+                type: Array,
                 value: ''
             },
             disabled: {
@@ -57,5 +59,10 @@
                 value: 'left', //left right
             }
         },
+        methods:{
+            handleChange(e){
+                this.$emit('on-change',e)
+            }
+        }
     }
 </script>

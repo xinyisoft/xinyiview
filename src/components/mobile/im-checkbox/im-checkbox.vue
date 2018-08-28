@@ -1,20 +1,22 @@
 <template>
-    <div class="i-class i-checkbox">
-        <im-cell i-class="i-checkbox-cell">
-            <label class="i-checkbox-label">
+    <im-cell-group>
+    <div class="i-class i-checkbox" @change="handleChange">
+        <label class="i-checkbox-label" v-for="item in options" :key="item.key">
+            <im-cell i-class="i-checkbox-cell" >
                 <span :class="[alignCls]">
                   <input
                       v-model="currentValue"
                       :class="['i-checkbox-input']"
                       type="checkbox"
                       :disabled="disabled"
-                      :value="options">
+                      :value="item.key">
                   <span class="i-checkbox-core"></span>
                 </span>
-                <div class="i-checkbox-title">{{options}}</div>
-            </label>
-        </im-cell>
+                <div class="i-checkbox-title">{{item.name}}</div>
+            </im-cell>
+        </label>
     </div>
+    </im-cell-group>
 </template>
 
 
@@ -39,8 +41,8 @@
         },
         props: {
             options: {
-                type: String,
-                value:'',
+                type: Array,
+                value:[],
             },
             value: Array,
             disabled: {
@@ -60,6 +62,11 @@
                 value: 'left', //left right
             }
         },
+        methods:{
+            handleChange(e){
+                this.$emit('on-change',e);
+            }
+        }
     }
 </script>
 
